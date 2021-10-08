@@ -1,0 +1,613 @@
+/* SUMMARY
+1. GLOBAL
+2. HOMEPAGE
+3. PRICING
+4. COURSES
+5. FOOTER
+
+*/
+/* Underscored name properties are custom */
+
+/*** 1. GLOBAL ***/
+/* Color variables
+  ============================= */
+
+:root {
+  --color-purple: #c271ff;
+  --color-dark-blue: #071629;
+  --container-large-desktop: 1300px;
+}
+
+/* Base
+============================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.bg__purple {
+  background-color: var(--color-purple);
+}
+
+.txt__purple {
+  color: var(--color-purple);
+}
+
+.bg__dark-blue {
+  background-color: var(--color-dark-blue);
+}
+
+.bg-default {
+  background-color: var(--color-dark-blue);
+}
+
+.txt__dark-blue {
+  color: var(--color-dark-blue);
+}
+
+.btn-primary {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px !important;
+  border: 0;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary,
+.btn-primary:active {
+  background-color: var(--color-purple) !important;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+a {
+  color: white;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--color-purple);
+}
+
+a.current__link {
+  color: var(--color-purple);
+  cursor: default;
+  position: relative;
+}
+
+a.current__link::after {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 5;
+}
+
+/* Icons
+============================ */
+/* Hidden Menu
+  ============================== */
+.holberton_school-icon-menu {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Social Media Icons
+  ============================== */
+.holberton_school-icon-ic_facebook:before {
+  content: "\e908";
+}
+
+.holberton_school-icon-ic_twitter:before {
+  content: "\e90f";
+}
+
+.holberton_school-icon-ic_instagram:before {
+  content: "\e90a";
+}
+
+/* Pricing Table
+  ============================== */
+.holberton_school-icon-check:before {
+  content: "\e905";
+}
+
+/**   Fetch utility ***/
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #c271ff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*** 1. HOMEPAGE ***/
+/* Header - Logo
+============================ */
+
+.lo {
+  width: 37px;
+  height: 30px;
+  background: url(/images/smile_off.png) 0 0 no-repeat;
+  display: block;
+  background-size: contain;
+}
+
+.go {
+  width: 112px;
+  height: 13px;
+  background: url(/images/logo.svg) 0 0 no-repeat;
+  display: block;
+  background-size: contain;
+}
+
+.logo__smile {
+  text-indent: -99999px;
+  width: 37px;
+  height: 30px;
+  background: url(images/smile_off.svg) 0 0 no-repeat;
+  display: block;
+  background-size: contain;
+}
+
+.logo {
+  text-indent: -99999px;
+  width: 112px;
+  height: 13px;
+  background: url(images/logo.svg) 0 0 no-repeat;
+  display: block;
+  background-size: contain;
+}
+
+/* Navigation Bar
+  ============================== */
+
+.nav-link {
+  font-size: 12px;
+  letter-spacing: 0.05rem;
+}
+
+/* Hero
+  ============================== */
+
+.header__homepage {
+  background: url("images/pic_1.jpg") var(--color-dark-blue) center center
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 1093px;
+  width: 100%;
+}
+.x {
+  width: 220px;
+}
+.hero__title {
+  font-size: 7.5rem;
+  margin-top: 10rem;
+}
+
+/* Pros Section
+  ============================== */
+
+.section__pros-title {
+  font-size: 32px;
+}
+
+.pros__photo {
+  width: 150px;
+  height: 150px;
+}
+
+.pros__name {
+  font-size: 18px;
+  line-height: 1rem;
+}
+
+@media screen and (max-width: 575px) {
+  .nav {
+    margin-top: 1rem;
+  }
+  .header__homepage {
+    background-size: 1230px;
+    background-position: top;
+    min-height: 14px;
+  }
+  .pro__section {
+    margin-top: 120px !important;
+  }
+  .hero__title {
+    font-size: 61px;
+  }
+
+  .hero article {
+    margin-top: 0;
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .hero {
+    padding-bottom: 2.5rem;
+  }
+  .hero__title {
+    line-height: 1;
+  }
+  .section__pros-title {
+    padding: 0 !important;
+  }
+}
+
+/* Testimonials Carousel Section
+  ============================== */
+
+.carousel__img {
+  width: 160px;
+  height: 160px;
+}
+.carousel__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.text__box p {
+  margin-left: 22px;
+  font-size: 22px;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+  width: 29.04px;
+  height: 62.67px;
+}
+
+.carousel-item__text p {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 575px) {
+  .carousel__img {
+    width: 148px;
+    height: 148px;
+  }
+
+  .carousel-item__text {
+    margin-right: 0;
+  }
+}
+
+/* Tutorials Carousel Section
+  ============================== */
+
+.card {
+  width: 16rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+}
+
+.play__icon {
+  width: 64px;
+}
+
+h4.card-title {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.duration__video,
+.user__name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 27px;
+  color: var(--color-purple);
+}
+
+.rating__stars img {
+  width: 15px;
+  margin-left: 4px;
+}
+
+/* Media Queries for Popular Tutorials and Latest Videos
+  ============================== */
+
+@media screen and (max-width: 576px) {
+  #popular_tutorials-sm,
+  #latest-videos-sm {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1109px) {
+  #popular_tutorials-md,
+  #latest-videos-md {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  #popular_tutorials-lg,
+  #latest-videos-lg {
+    display: block !important;
+  }
+
+  #popular_tutorials-lg .carousel-inner .carousel-item-right.active,
+  #popular_tutorials-lg .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  #popular_tutorials-lg .carousel-inner .carousel-item-left.active,
+  #popular_tutorials-lg .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+  #popular_tutorials-lg .carousel-inner .carousel-item-right,
+  #popular_tutorials-lg .carousel-inner .carousel-item-left {
+    transform: translateX(0);
+  }
+
+  #latest-videos-lg .carousel-inner .carousel-item-right.active,
+  #latest-videos-lg .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  #latest-videos-lg .carousel-inner .carousel-item-left.active,
+  #latest-videos-lg .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+  #latest-videos-lg .carousel-inner .carousel-item-right,
+  #latest-videos-lg .carousel-inner .carousel-item-left {
+    transform: translateX(0);
+  }
+}
+
+/* Free Membership Section
+  ============================== */
+
+.membership__card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.membership__card p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .membership__card {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 575px) {
+  .membership__card {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .membership__card {
+    padding-bottom: 2.25rem;
+  }
+}
+
+/*** 3. PRICING PAGE ***/
+/* Hero
+  ============================== */
+
+.pricing__header {
+  background: url("images/pic_2.jpg") var(--color-dark-blue) top center
+    no-repeat;
+  background-size: cover;
+  min-height: 1170px;
+}
+
+.pricing h1 {
+  font-size: 32px;
+  margin-top: 13.5rem;
+  margin-bottom: 5rem;
+}
+
+.pricing h1 span {
+  font-family: "Coiny", cursive;
+}
+
+.smile__icon {
+  max-width: 37px;
+  margin-top: -5px;
+}
+
+.pricing__grid h2 {
+  font-size: 60px;
+  line-height: 75px;
+}
+
+.prices__banner h3 {
+  font-size: 44px;
+  margin-bottom: 0;
+}
+
+.prices__banner p {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.prices__banner button {
+  width: 162px;
+  height: 44px;
+}
+
+/* Prices Grid/Table
+  ============================== */
+
+.prices__table {
+  table-layout: fixed;
+}
+
+.prices__table td {
+  padding: 1.25rem 0;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.prices__table tbody tr > td {
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.col__2 span,
+.col__3 span {
+  vertical-align: middle;
+}
+
+.holberton_school-icon-check {
+  font-size: 30px;
+  color: #82d24f;
+}
+
+@media screen and (max-width: 768px) {
+  .prices__table tbody tr:nth-child(-n + 3) td {
+    padding: 1rem 0;
+  }
+  .pricing__header {
+    background-size: 1400px;
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pricing__header {
+    background-position: -550px top;
+  }
+  .pricing__grid h1 {
+    font-size: 24px;
+    margin-top: 11.5rem;
+    margin-bottom: 3rem;
+  }
+  .smile__icon {
+    max-width: 30px;
+  }
+  .pricing__grid h2 {
+    margin-bottom: 2.25rem;
+  }
+  .prices__table {
+    table-layout: initial;
+  }
+  .prices__table th {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .prices__table tbody tr > td:first-child {
+    width: 50%;
+  }
+  .col__2 {
+    width: 27%;
+  }
+  .col__3 {
+    width: 20%;
+  }
+  .col__3 span {
+    padding-left: 10px;
+  }
+  .table thead th.col__2,
+  .pricing__grid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* F.A.Q Section
+  ============================== */
+
+.faq h2 {
+  font-size: 60px;
+  line-height: 75px;
+}
+
+.faq__item h3 {
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 25px;
+}
+
+.faq__item p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1185px) {
+  .faq__item {
+    max-width: 40% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .faq__item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/*** 5. FOOTER ***/
+
+.social-media__item a {
+  font-size: 32px;
+}
+
+footer p {
+  color: white;
+  opacity: 0.35;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@media (max-width: 768px) {
+  .videocarousel .carousel-inner .carousel-item > div {
+    display: block;
+  }
+  .videocarousel .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.videocarousel .carousel-inner .carousel-item.active,
+.videocarousel .carousel-inner .carousel-item-next,
+.videocarousel .carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* display 3 */
+
+#latest-videos-lg .carousel-item {
+  display: flex;
+  flex-direction: row;
+}
